@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>BuyMeFood | Login</title>
+  <link rel="stylesheet" href="auth.css" />
+</head>
+<body>
+  <div class="container" id="container">
+    <!-- Sign Up -->
+    <div class="form-container sign-up-container">
+      <form id="signupForm">
+        <h1>Create Account</h1>
+        <input type="email" placeholder="Email" id="signupEmail" required />
+        <input type="password" placeholder="Password" id="signupPassword" required />
+        <button type="submit">Sign Up</button>
+        <button type="button" id="mobileLoginBtn" class="mobile-only">Login</button>
+      </form>
+    </div>
+
+    <!-- Sign In -->
+    <div class="form-container sign-in-container">
+      <form id="loginForm">
+        <h1>Sign in</h1>
+        <input type="email" placeholder="Email" id="loginEmail" required />
+        <input type="password" placeholder="Password" id="loginPassword" required />
+        <button type="submit">Login</button>
+        <!-- Inside sign-in form -->
+<button type="button" id="mobileCreateAccountBtn" class="mobile-only">Create Account</button>
+
+      </form>
+    </div>
+
+    <!-- Overlay Panels -->
+    <div class="overlay-container">
+      <div class="overlay">
+        <div class="overlay-panel overlay-left">
+          <h1>Welcome Back!</h1>
+<p>To keep ordering with us, please login</p>
+<button class="ghost" id="signIn">Sign In</button>
+
+
+        </div>
+        <div class="overlay-panel overlay-right">
+          <div class="panel-content right">
+  <h1>Hello, Foodie!</h1>
+  <p>Enter your details and start your journey with BuyMeFood</p>
+  <button class="ghost" id="signUp">Sign Up</button>
+  
+</div>
+
+
+        </div>
+      </div>
+    </div>
+    
+  </div>
+  
+
+  <script type="module" src="./auth.js"></script>
+</body>
+</html>
+
