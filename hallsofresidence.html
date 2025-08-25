@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Vendors | BuyMeFood</title>
+  <link rel="stylesheet" href="./vendors.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+<nav class="navbar">
+  <a href="dashboard.html" class="logo">
+    <img src="./assets/logos/Screenshot 2025-08-03 182027.png" alt="Logo" />
+  </a>
+
+  <!-- Hamburger Icon -->
+  <div class="hamburger" id="hamburgerBtn">
+    <i class="fas fa-bars"></i>
+  </div>
+
+  <!-- Desktop Nav Links -->
+  <ul class="nav-links">
+    <li><a href="vendors.html" class="active">Vendors</a></li>
+    <li><a href="orders.html">Order History</a></li>
+    <li>
+      <a href="cart.html" class="cart-link">
+  🛒 Cart (<span id="cart-count">0</span>)
+</a>
+
+    </li>
+    <li>
+      <a href="profile.html">
+        <i class="fas fa-user-circle"></i>
+      </a>
+    </li>
+  </ul>
+</nav>
+
+<!-- Sidebar -->
+<div class="sidebar" id="mobileSidebar">
+  <div class="close-btn" id="closeSidebar">
+    <i class="fas fa-times"></i>
+  </div>
+  <ul>
+    <li><a href="vendors.html" class="active">Vendors</a></li>
+    <li><a href="orders.html">Order History</a></li>
+    <li><a href="cart.html" class="cart-link">
+  🛒 Cart (<span id="cart-count">0</span>)
+</a>
+</li>
+    <li><a href="profile.html">Profile</a></li>
+  </ul>
+</div>
+
+<!-- Overlay -->
+<div class="overlay" id="overlay"></div>
+
+
+  <!-- SEARCH BAR -->
+ <div class="search-container">
+  <input type="text" id="vendor-search" placeholder="Search vendors...">
+</div>
+
+
+  <!-- VENDOR CARDS SECTION -->
+  <section class="vendor-section">
+  <h2>Vendors</h2>
+  <div class="vendor-cards">
+    <div class="vendor-card" data-id="vendor1">
+      <img src="./assets/images/burger and so on.jpg" alt="Vendor 1" />
+      <h3>Shawarma King</h3>
+      <p>Best grilled shawarma in town</p>
+      <button class="add-to-cart">Add to Cart</button>
+    </div>
+
+    <div class="vendor-card" data-id="vendor2">
+      <img src="./assets/images/hotdog.jpg" alt="Vendor 2" />
+      <h3>Burger Queen</h3>
+      <p>Delicious homemade burgers</p>
+      <button class="add-to-cart">Add to Cart</button>
+    </div>
+
+    <div class="vendor-card" data-id="vendor3">
+      <img src="./assets/images/pizza.jpg" alt="Vendor 3" />
+      <h3>Pizza Hub</h3>
+      <p>Cheesy pizza, fresh from the oven</p>
+      <button class="add-to-cart">Add to Cart</button>
+    </div>
+    <div class="vendor-card" data-id="vendor1">
+      <img src="./assets/images/burger and so on.jpg" alt="Vendor 1" />
+      <h3>Shawarma King</h3>
+      <p>Best grilled shawarma in town</p>
+      <button class="add-to-cart">Add to Cart</button>
+    </div>
+
+    <div class="vendor-card" data-id="vendor2">
+      <img src="./assets/images/hotdog.jpg" alt="Vendor 2" />
+      <h3>Burger Queen</h3>
+      <p>Delicious homemade burgers</p>
+      <button class="add-to-cart">Add to Cart</button>
+    </div>
+
+    <div class="vendor-card" data-id="vendor3">
+      <img src="./assets/images/pizza.jpg" alt="Vendor 3" />
+      <h3>Pizza Hub</h3>
+      <p>Cheesy pizza, fresh from the oven</p>
+      <button class="add-to-cart">Add to Cart</button>
+    </div>
+    <div class="vendor-card" data-id="vendor1">
+      <img src="./assets/images/burger and so on.jpg" alt="Vendor 1" />
+      <h3>Shawarma King</h3>
+      <p>Best grilled shawarma in town</p>
+      <button class="add-to-cart">Add to Cart</button>
+    </div>
+
+    <div class="vendor-card" data-id="vendor2">
+      <img src="./assets/images/hotdog.jpg" alt="Vendor 2" />
+      <h3>Burger Queen</h3>
+      <p>Delicious homemade burgers</p>
+      <button class="add-to-cart">Add to Cart</button>
+    </div>
+
+    <div class="vendor-card" data-id="vendor3">
+      <img src="./assets/images/pizza.jpg" alt="Vendor 3" />
+      <h3>Pizza Hub</h3>
+      <p>Cheesy pizza, fresh from the oven</p>
+      <button class="add-to-cart">Add to Cart</button>
+    </div>
+    <div class="vendor-card" data-id="vendor1">
+      <img src="./assets/images/burger and so on.jpg" alt="Vendor 1" />
+      <h3>Shawarma King</h3>
+      <p>Best grilled shawarma in town</p>
+      <button class="add-to-cart">Add to Cart</button>
+    </div>
+
+    <div class="vendor-card" data-id="vendor2">
+      <img src="./assets/images/hotdog.jpg" alt="Vendor 2" />
+      <h3>Burger Queen</h3>
+      <p>Delicious homemade burgers</p>
+      <button class="add-to-cart">Add to Cart</button>
+    </div>
+
+    <div class="vendor-card" data-id="vendor3">
+      <img src="./assets/images/pizza.jpg" alt="Vendor 3" />
+      <h3>Pizza Hub</h3>
+      <p>Cheesy pizza, fresh from the oven</p>
+      <button class="add-to-cart">Add to Cart</button>
+    </div>
+    <div class="vendor-card" data-id="vendor1">
+      <img src="./assets/images/burger and so on.jpg" alt="Vendor 1" />
+      <h3>Shawarma King</h3>
+      <p>Best grilled shawarma in town</p>
+      <button class="add-to-cart">Add to Cart</button>
+    </div>
+
+    <div class="vendor-card" data-id="vendor2">
+      <img src="./assets/images/hotdog.jpg" alt="Vendor 2" />
+      <h3>Burger Queen</h3>
+      <p>Delicious homemade burgers</p>
+      <button class="add-to-cart">Add to Cart</button>
+    </div>
+
+    <div class="vendor-card" data-id="vendor3">
+      <img src="./assets/images/pizza.jpg" alt="Vendor 3" />
+      <h3>Pizza Hub</h3>
+      <p>Cheesy pizza, fresh from the oven</p>
+      <button class="add-to-cart">View</button>
+    </div>
+    
+  </div>
+</section>
+
+
+
+  <script src="vendors.js"></script>
+</body>
+</html>
