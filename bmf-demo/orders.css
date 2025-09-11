@@ -1,0 +1,95 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font);
+  background: var(--gray);
+  color: var(--black);
+  scroll-behavior: smooth;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: var(--black);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo img {
+  height: 40px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.nav-links a {
+  color: var(--white);
+  font-weight: 600;
+  text-decoration: none;
+  position: relative;
+  transition: color 0.3s;
+}
+
+.nav-links a.active,
+.nav-links a:hover {
+  color: var(--red);
+}
+
+.cart-count {
+  background: var(--red);
+  color: var(--white);
+  border-radius: 50%;
+  padding: 3px 8px;
+  font-size: 12px;
+  position: absolute;
+  top: -8px;
+  right: -12px;
+}
+
+
+
+
+.orders-section {
+  margin: 20px;
+  padding: 20px;
+}
+.orders-section h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+.order-card {
+  background: #f9f9f9;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+.order-card h3 {
+  margin: 0 0 10px;
+  color: #333;
+}
+.order-card p {
+  margin: 5px 0;
+  color: #666;
+}
+.order-card ul {
+  list-style: none;
+  padding: 0;
+}
+.order-card li {
+  padding: 5px 0;
+  border-bottom: 1px solid #eee;
+}

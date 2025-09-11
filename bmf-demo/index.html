@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>BuyMeFood</title>
+  <link rel="stylesheet" href="./dashboard.css" />
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- AOS CSS -->
+<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+<!-- CDN CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+<!-- CDN JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+/>
+
+
+</head>
+<body>
+
+  <div class="dashboard-container">
+    <!-- Navbar -->
+    <nav class="bmf-navbar">
+      <div class="bmf-nav-container">
+        <!-- Left: Logo -->
+        <a href="./index.html" class="bmf-brand-link">
+          <span class="bmf-brand">BuyMe<span class="dot">Food</span></span>
+        </a>
+
+        <!-- Right: Hamburger (mobile) and Actions -->
+        <div class="bmf-right">
+          <button class="hamburger" onclick="toggleSidebar()" id="menuToggle">&#9776;</button>
+          <div class="nav-actions" id="navMenu">
+            <!-- Wallet -->
+          <div class="nav-actions desktop-only">
+
+            <!-- Profile -->
+            <a href="./auth.html"><button class="profile-btn">
+              <i class="fas fa-user"></i>
+              Sign In
+            </button></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Sidebar (Wallet, Cart, Profile) -->
+<div class="bmf-sidebar" id="bmfSidebar">
+  <button class="close-sidebar" onclick="toggleSidebar()">&times;</button>
+
+  <div class="sidebar-content">
+    
+
+    <a href="./auth.html" class="hero-btn" id="this">Sign In</a>
+
+    
+  </div>
+</div>
+
+<!-- Overlay -->
+<div class="sidebar-overlay" id="sidebarOverlay" onclick="toggleSidebar()"></div>
+
+
+<!-- Overlay (to dim background when sidebar is open) -->
+<div class="sidebar-overlay" id="sidebarOverlay" onclick="toggleSidebar()"></div>
+
+
+  <section class="hero-full-bg">
+  <div class="hero-overlay">
+    <div class="hero-circle-text">
+      <h1>Delicious Meals Delivered</h1>
+      <p>Order from your favorite vendors and get it fast & fresh.</p>
+      <a href="#" class="hero-btn">Explore Vendors</a>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="together-section" data-aos="fade-up">
+  <!-- Top SVG Wave Divider -->
+  <div class="wave wave-top">
+    <svg viewBox="0 0 1440 100" preserveAspectRatio="none">
+      <path d="M0,64 C480,0 960,160 1440,64 L1440,0 L0,0 Z" fill="#000"></path>
+    </svg>
+  </div>
+
+  <div class="together-content animate-fade-slide" >
+    <div class="icon-box">
+      <img src="./assets/svg/toppng.com-handshake-icon-icon-handshake-free-980x612.png" alt="Handshake Icon" />
+    </div>
+    <h2>Let's do it together</h2>
+
+    <div class="circle-image-grid" data-aos="zoom-in">
+      <div class="circle-img animate-zoom">
+        <img src="./assets/images/hotdog.jpg" alt="Choice waffles" />       
+      </div>
+      <div class="circle-img animate-zoom delay-1">
+        <img src="./assets/images/stake.jpg" alt="Fruity Life" />
+      </div>
+      <div class="circle-img animate-zoom delay-2">
+        <img src="./assets/images/vectors.jpg" alt="Yamarita" />
+      </div>
+    </div>
+  </div>
+  <a href="#" class="hero-btn" id="this">Explore Vendors</a>
+
+  <!-- Bottom SVG Wave Divider -->
+  <div class="wave wave-bottom">
+    <svg viewBox="0 0 1440 100" preserveAspectRatio="none">
+      <path d="M0,64 C480,160 960,0 1440,64 L1440,100 L0,100 Z" fill="#ffffff"></path>
+    </svg>
+  </div>
+</section>
+
+
+<section class="vendor-section" id="vendors">
+  <div class="vendor-header" data-aos="fade-up">
+    <h2>Our Popular Vendors</h2>
+    <p>Check out top-rated food vendors around you</p>
+  </div>
+
+  <div class="swiper-container">
+    <div class="swiper-wrapper">
+      <!-- Vendor Card -->
+      <div class="swiper-slide" data-aos="zoom-in">
+        <img src="./assets/images/burger and so on.jpg" alt="Vendor 1">
+        <h4>Vendor One</h4>
+        <div class="slide-btns">
+          <button class="btn vendor-action">Explore Vendors</button>
+          <button class="btn vendor-view">View</button>
+        </div>
+      </div>
+
+      <!-- Repeat more slides -->
+      <div class="swiper-slide" data-aos="zoom-in">
+        <img src="./assets/images/plain.jpg" alt="Vendor 2">
+        <h4>Vendor Two</h4>
+        <div class="slide-btns">
+          <button class="btn vendor-action">Explore Vendors</button>
+          <button class="btn vendor-view">View</button>
+        </div>
+      </div>
+      <div class="swiper-slide" data-aos="zoom-in">
+        <img src="./assets/images/center.jpg" alt="Vendor 1">
+        <h4>Vendor One</h4>
+        <div class="slide-btns">
+          <button class="btn vendor-action">Explore Vendors</button>
+          <button class="btn vendor-view">View</button>
+        </div>
+      </div>
+      <div class="swiper-slide" data-aos="zoom-in">
+        <img src="./assets/images/hotdog.jpg" alt="Vendor 1">
+        <h4>Vendor One</h4>
+        <div class="slide-btns">
+          <button class="btn vendor-action">Explore Vendors</button>
+          <button class="btn vendor-view">View</button>
+        </div>
+      </div>
+      <div class="swiper-slide" data-aos="zoom-in">
+        <img src="./assets/images/pizza.jpg" alt="Vendor 1">
+        <h4>Vendor One</h4>
+        <div class="slide-btns">
+          <button class="btn vendor-action">Explore Vendors</button>
+          <button class="btn vendor-view">View</button>
+        </div>
+      </div>
+
+      <!-- Add more slides as needed -->
+    </div>
+  </div>
+</section>
+
+
+<section class="location-section" id="order-locations">
+  <h2 class="section-title animate-fade-up">Where are you ordering from?</h2>
+
+  <div class="location-cards">
+    <!-- Lagos -->
+    <div class="location-card animate-fade-up">
+      <img src="./assets/images/pizza.jpg" alt="Lagos" />
+      <div class="card-content">
+        <h3 class="location-title">Engineering buildings</h3>
+        <p class="location-description">
+          Explore delicious meals from vendors across Lagos.
+        </p>
+        <button class="view-button">View Vendors</button>
+      </div>
+    </div>
+
+    <!-- Abuja -->
+    <div class="location-card animate-fade-up" style="animation-delay: 0.2s;">
+      <img src="./assets/images/vector.jpg" alt="Abuja" />
+      <div class="card-content">
+        <h3 class="location-title">Halls of residence</h3>
+        <p class="location-description">
+          Discover top-rated vendors in the heart of Abuja.
+        </p>
+        <button class="view-button">View Vendors</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="restaurant-map-section">
+  <div class="restaurant-map">
+    <img src="./assets/images/hotdog.jpg" alt="Map" />
+  </div>
+
+  <div class="restaurant-list">
+    <h3>Restaurants</h3>
+    <div class="restaurant-items" id="restaurant-items">
+      <a href="shawarma-place.html" class="restaurant-card">
+        Shawarma Place
+        <i class="fas fa-shopping-cart"></i>
+      </a>
+      <a href="shawarma-place.html" class="restaurant-card">
+        Shawarma Place
+        <i class="fas fa-shopping-cart"></i>
+      </a>
+      <a href="shawarma-place.html" class="restaurant-card">
+        Shawarma Place
+        <i class="fas fa-shopping-cart"></i>
+      </a>
+      <a href="shawarma-place.html" class="restaurant-card">
+        Shawarma Place
+        <i class="fas fa-shopping-cart"></i>
+      </a>
+      <a href="shawarma-place.html" class="restaurant-card">
+        Shawarma Place
+        <i class="fas fa-shopping-cart"></i>
+      </a>
+      <a href="shawarma-place.html" class="restaurant-card">
+        Shawarma Place
+        <i class="fas fa-shopping-cart"></i>
+      </a>
+      <a href="shawarma-place.html" class="restaurant-card">
+        Shawarma Place
+        <i class="fas fa-shopping-cart"></i>
+      </a>
+      <a href="shawarma-place.html" class="restaurant-card">
+        Shawarma Place
+        <i class="fas fa-shopping-cart"></i>
+      </a>
+      <a href="jollof-spot.html" class="restaurant-card">
+        Jollof Spot
+        <i class="fas fa-shopping-cart"></i>
+      </a>
+      <!-- Add more items here -->
+    </div>
+  </div>
+</section>
+
+
+
+<div class="faq-section">
+
+  <!-- 🖥 DESKTOP VERSION -->
+  <div class="faq-container faq-desktop">
+    <div class="faq-questions">
+      <h2>FAQs.</h2>
+      <div class="question-list">
+        <button class="faq-item active" data-answer="q1">
+          What is Buy Me Food(BMF)?
+          <span class="faq-icon">𖤐</span>
+        </button>
+        <button class="faq-item" data-answer="q2">
+          How do I place an order?
+          <span class="faq-icon">𖤐</span>
+        </button>
+        <button class="faq-item" data-answer="q3">
+          At what time can I order during the day?
+          <span class="faq-icon">𖤐</span>
+        </button>
+        <button class="faq-item" data-answer="q4">
+          What are your operating hours?
+          <span class="faq-icon">𖤐</span>
+        </button>
+        <button class="faq-item" data-answer="q5">
+          How much does the delivery fee cost?
+          <span class="faq-icon">𖤐</span>
+        </button>
+        <button class="faq-item" data-answer="q6">
+          Can payments be made with cash?
+          <span class="faq-icon">𖤐</span>
+        </button><button class="faq-item" data-answer="q7">
+          How long do deliveries take?
+          <span class="faq-icon">𖤐</span>
+        </button>
+        </button><button class="faq-item" data-answer="q8">
+          What is a pickup location?
+          <span class="faq-icon">𖤐</span>
+        </button>
+        </button><button class="faq-item" data-answer="q9">
+          How will I know the pickup location?
+          <span class="faq-icon">𖤐</span>
+        </button>
+        </button><button class="faq-item" data-answer="q10">
+          How do I report an issue with my delivery?
+          <span class="faq-icon">𖤐</span>
+        </button>
+        </button><button class="faq-item" data-answer="q11">
+          Can lecturers and other staff use this service?
+          <span class="faq-icon">𖤐</span>
+        </button>
+        </button><button class="faq-item" data-answer="q12">
+          How can I apply to be a waiter?
+          <span class="faq-icon">𖤐</span>
+        </button>
+        <!-- Add more -->
+      </div>
+    </div>
+    <div class="faq-answers">
+      <h2>Ans.</h2>
+      <div class="answer-box">
+        <div class="answer active" id="q1">
+          <p>Buy Me Food (BMF) is a technology company that provides food delivery services in covenant university.</p>
+        </div>
+        <div class="answer" id="q2">
+          <p>Orders can be placed directly through our website or our Telegram bot.</p>
+        </div>
+        <div class="answer" id="q3">
+          <p>For the engineering buildings, you can order between 8:00am and 12:30pm.</p>
+        </div>
+        <div class="answer" id="q4">
+          <p>Engineering buildings: 8:00am – 12:30pm   Halls of residence: 10:00am – 6:00pm</p>
+        </div>
+        <div class="answer" id="q5">
+          <p>Delivery fees vary depending on the quantity of food ordered and the distance to your location.</p>
+        </div>
+        <div class="answer" id="q6">
+          <p>No. At the moment, all payments are made online through our website or Telegram bot.</p>
+        </div>
+        <div class="answer" id="q7">
+          <p>Deliveries usually take between 30 minutes to 1 hour 30 minutes, depending on order volume and location.</p>
+        </div>
+        <div class="answer" id="q8">
+          <p>A pickup location is a designated spot within the engineering buildings where customers can collect their food. Pickup points will be shared in our official Telegram channel.</p>
+        </div>
+        <div class="answer" id="q9">
+          <p>Pickup locations are always communicated ahead of time via our Telegram channel, so make sure to stay updated there.</p>
+        </div>
+        <div class="answer" id="q10">
+          <p>You can report any issues through our Telegram bot or by contacting us via our support email. bmfassist@gmail.com.</p>
+        </div>
+        <div class="answer" id="q11">
+          <p>Yes. Lecturers and staff can place orders, but deliveries are made only to the engineering buildings and halls of residence, not staff quarters.</p>
+        </div>
+        <div class="answer" id="q12">
+          <p>You can apply through the application link on our Telegram bot or directly via the link on our website.</p>
+        </div>
+        <!-- Add more answers -->
+      </div>
+    </div>
+  </div>
+
+  <!-- 📱 MOBILE VERSION -->
+  <div class="faq-mobile">
+    <div class="faq-answers">
+      <h2>Ans.</h2>
+      <div class="answer-box" id="mobile-answer">
+        <p>Chowdeck is a technology company that provides logistics services...</p>
+      </div>
+    </div>
+    <div class="faq-questions-carousel">
+      <button class="carousel-item active" data-mobile-answer="q1">What is Buy Me Food?</button>
+      <button class="carousel-item" data-mobile-answer="q2">How do I place an order?</button>
+      <button class="carousel-item" data-mobile-answer="q3">At what time can I order during the day?</button>
+      <button class="carousel-item" data-mobile-answer="q4">What are your operating hours?</button>
+      <button class="carousel-item" data-mobile-answer="q5">How much does the delivery fee cost?</button>
+      <button class="carousel-item" data-mobile-answer="q6">Can payments be made with cash?</button>
+      <button class="carousel-item" data-mobile-answer="q7">How long do deliveries take?</button>
+      <button class="carousel-item" data-mobile-answer="q8">What is a pickup location?</button>
+      <button class="carousel-item" data-mobile-answer="q9">How will I know the pickup location?</button>
+      <button class="carousel-item" data-mobile-answer="q10">How do I report an issue with my delivery?</button>
+      <button class="carousel-item" data-mobile-answer="q11">Can lecturers and other staff use this service?</button>
+      <button class="carousel-item" data-mobile-answer="q12">How can I apply to be a waiter?</button>
+      <!-- Add more -->
+    </div>
+  </div>
+
+</div>
+
+
+
+<section class="place-order-section">
+  <div class="place-order-container">
+    <h2 class="place-order-title">Place your order in seconds</h2>
+    <div class="place-order-cards">
+      <!-- Card 1 -->
+      <div class="place-order-card">
+        <img src="./assets/images/stake.jpg" alt="Quick Start">
+        <div class="place-order-card-content">
+          <h3>Quick Start</h3>
+          <p>Register, find your meal, and place the order instantly.</p>
+          <div class="place-order-card-buttons">
+            <a href="#" class="place-order-btn primary">Get Started</a>
+            <a href="#" class="place-order-btn secondary">Learn More</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="place-order-card">
+        <img src="./assets/images/burger and so on.jpg" alt="Track Order">
+        <div class="place-order-card-content">
+          <h3>Track Order</h3>
+          <p>Watch in real time as your food makes its way to you.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<footer class="site-footer">
+  <div class="footer-container">
+    <div class="footer-left">
+      <a href="/index.html">
+        <img src="./assets/logos/Screenshot 2025-08-03 182027.png" alt="BuyMeFood Logo" class="footer-logo">
+      </a>
+      <p class="footer-motto">Delicious food delivered to your door</p>
+    </div>
+
+    <div class="footer-right">
+      <div class="footer-col">
+        <h4 class="hehe">Info</h4>
+        <ul>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Vendors</a></li>
+          <li><a href="#">Delivery</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4 class="hehe">Legal</h4>
+        <ul>
+          <li><a href="#">Terms of Use</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4 class="hehe">Get In Touch</h4>
+        <ul>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">Support</a></li>
+        </ul>
+        <div class="social-icons">
+          <a href="#"><img src="./assets/logos/icons8-telegram-app-24.png" alt="Telegram" /></a>
+          <a href="#"><img src="./assets/logos/icons8-instagram-24.png" alt="Instagram" /></a>
+          <a href="#"><img src="./assets/logos/icons8-tiktok-24.png" alt="TikTok" /></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <p class="footer-copy">&copy; 2025 BuyMeFood. All rights reserved.</p>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Script -->
+   <script type="module" src="app.js"></script>
+  <script>
+    document.getElementById('menuToggle').addEventListener('click', function () {
+      document.getElementById('navMenu').classList.toggle('show');
+    });
+
+    document.getElementById('walletToggle').addEventListener('click', function () {
+      document.querySelector('.wallet-dropdown').classList.toggle('open');
+    });
+
+    window.addEventListener('click', function (e) {
+      const wallet = document.getElementById('walletToggle');
+      const dropdown = document.querySelector('.wallet-dropdown');
+      if (!wallet.contains(e.target) && !dropdown.contains(e.target)) {
+        dropdown.classList.remove('open');
+      }
+    });
+  </script>
+
+  <script>
+  function toggleSidebar() {
+    const sidebar = document.getElementById("bmfSidebar");
+    const overlay = document.getElementById("sidebarOverlay");
+    sidebar.classList.toggle("open");
+    overlay.classList.toggle("show");
+  }
+
+  // Optional: Close sidebar on ESC key
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape") {
+      document.getElementById("bmfSidebar").classList.remove("open");
+      document.getElementById("sidebarOverlay").classList.remove("show");
+    }
+  });
+
+  // Wallet dropdown toggle (inside sidebar)
+  document.addEventListener("click", function (e) {
+    const wallet = document.querySelector(".wallet-dropdown");
+    if (wallet && wallet.contains(e.target)) {
+      wallet.classList.toggle("open");
+    } else {
+      wallet.classList.remove("open");
+    }
+  });
+</script>
+
+<script>
+  function toggleWalletDropdown(element) {
+    // Close other dropdowns
+    document.querySelectorAll('.wallet-dropdown').forEach(drop => {
+      if (drop !== element) drop.classList.remove('open');
+    });
+
+    // Toggle this one
+    element.classList.toggle('open');
+  }
+
+  // Close dropdown when clicking outside
+  document.addEventListener('click', function (e) {
+    const isDropdown = e.target.closest('.wallet-dropdown');
+    if (!isDropdown) {
+      document.querySelectorAll('.wallet-dropdown').forEach(drop => {
+        drop.classList.remove('open');
+      });
+    }
+  });
+</script>
+
+
+<!-- Swiper CDN -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<!-- AOS (Optional for scroll effects) -->
+<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const swiper = new Swiper('.swiper-container', {
+      slidesPerView: 3,
+      spaceBetween: 20,
+      loop: true,
+      autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+      },
+      breakpoints: {
+        0: { slidesPerView: 1 },
+        600: { slidesPerView: 2 },
+        900: { slidesPerView: 3 },
+      }
+    });
+
+    AOS.init({ duration: 1000 });
+  });
+</script>
+
+
+<script>
+  // 📍 Locations and markers
+  const locations = [
+    { name: "Festac", top: "10%", left: "10%", vendors: ["Shawarma King", "Grill Spot"] },
+    { name: "Yaba", top: "30%", left: "45%", vendors: ["Jay's Diner", "Yaba Suya Lounge"] },
+    { name: "Lekki", top: "60%", left: "55%", vendors: ["Amala Central", "Seafood Hub"] },
+    { name: "Ikeja", top: "20%", left: "65%", vendors: ["HNH", "Chicken Republic"] },
+    { name: "choice waffles", top: "40%", left: "13%", vendors: ["HNH", "Chicken Republic"] },
+    { name: "Ikeja", top: "50%", left: "73%", vendors: ["HNH", "Chicken Republic"] },
+    { name: "Ikeja", top: "80%", left: "85%", vendors: ["HNH", "Chicken Republic"] },
+  ];
+
+  const restaurantDetails = {
+    "Shawarma King": "Delicious shawarma and street food combo.",
+    "Grill Spot": "Best grilled chicken in town.",
+    "Jay's Diner": "American-style comfort food.",
+    "Yaba Suya Lounge": "Spicy suya with cold drinks.",
+    "Amala Central": "Nigerian delicacies and swallows.",
+    "Seafood Hub": "Premium seafood platters.",
+    "HNH": "Healthy and natural meals.",
+    "Chicken Republic": "Fast food and rice combos.",
+  };
+
+  const mapArea = document.getElementById("map-area");
+  const restaurantList = document.getElementById("restaurant-items");
+  const modal = document.getElementById("restaurantModal");
+  const modalTitle = document.getElementById("modalTitle");
+  const modalDesc = document.getElementById("modalDesc");
+  const closeModal = document.getElementById("closeModal");
+
+  // Render map markers
+  function renderMarkers() {
+    locations.forEach(loc => {
+      const marker = document.createElement('div');
+      marker.classList.add('map-marker');
+      marker.textContent = loc.name;
+      marker.style.top = loc.top;
+      marker.style.left = loc.left;
+      marker.dataset.location = loc.name;
+
+      marker.addEventListener('click', () => {
+        renderRestaurants(loc.vendors);
+      });
+
+      mapArea.appendChild(marker);
+    });
+  }
+
+  // Render restaurant items
+  function renderRestaurants(vendors) {
+    restaurantList.innerHTML = '';
+    vendors.forEach(name => {
+      const item = document.createElement('div');
+      item.classList.add('restaurant-item');
+      item.innerHTML = `
+        <span>${name}</span>
+        <i class="fas fa-shopping-cart"></i>
+      `;
+      item.addEventListener('click', () => {
+        modalTitle.textContent = name;
+        modalDesc.textContent = restaurantDetails[name] || 'More information coming soon.';
+        modal.style.display = 'flex';
+      });
+      restaurantList.appendChild(item);
+    });
+  }
+
+  // Close modal
+  closeModal.addEventListener('click', () => {
+    modal.style.display = 'none';
+  });
+
+  window.addEventListener('click', (e) => {
+    if (e.target === modal) modal.style.display = 'none';
+  });
+
+  // Init
+  renderMarkers();
+  renderRestaurants(locations[0].vendors);
+</script>
+
+   
+
+<script>
+  // DESKTOP BEHAVIOR
+  const desktopFaqItems = document.querySelectorAll('.faq-item');
+  const desktopAnswers = document.querySelectorAll('.answer');
+
+  desktopFaqItems.forEach(item => {
+    item.addEventListener('click', () => {
+      const target = item.getAttribute('data-answer');
+
+      desktopFaqItems.forEach(i => i.classList.remove('active'));
+      desktopAnswers.forEach(a => a.classList.remove('active'));
+
+      item.classList.add('active');
+      document.getElementById(target).classList.add('active');
+    });
+  });
+
+  // MOBILE BEHAVIOR
+  const mobileButtons = document.querySelectorAll('.carousel-item');
+  const mobileAnswerBox = document.getElementById('mobile-answer');
+
+  const answers = {
+    q1: 'Buy Me Food (BMF) is a technology company that provides food delivery services in covenant university.',
+    q2: 'Orders can be placed directly through our website or our Telegram bot.',
+    q3: 'For the engineering buildings, you can order between 8:00am and 12:30pm.',
+    q4: 'Engineering buildings: 8:00am – 12:30pm   Halls of residence: 10:00am – 6:00pm',
+    q5: 'Delivery fees vary depending on the quantity of food ordered and the distance to your location.',
+    q6: 'No. At the moment, all payments are made online through our website or Telegram bot.',
+    q7: 'Deliveries usually take between 30 minutes to 1 hour 30 minutes, depending on order volume and location.',
+    q8: 'A pickup location is a designated spot within the engineering buildings where customers can collect their food. Pickup points will be shared in our official Telegram channel.',
+    q9: 'Pickup locations are always communicated ahead of time via our Telegram channel, so make sure to stay updated there.',
+    q10: 'You can report any issues through our Telegram bot or by contacting us via our support email. bmfassist@gmail.com. ',
+    q11: 'Yes. Lecturers and staff can place orders, but deliveries are made only to the engineering buildings and halls of residence, not staff quarters.',
+    q12: 'You can apply through the application link on our Telegram bot or directly via the link on our website.',
+    // Add more answers as needed
+  };
+
+  mobileButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      mobileButtons.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      const key = btn.getAttribute('data-mobile-answer');
+      mobileAnswerBox.innerHTML = `<p>${answers[key]}</p>`;
+    });
+  });
+</script>
+
+
+<script>
+  const faders = document.querySelectorAll('.animate-fade-up');
+
+  const appearOptions = {
+    threshold: 0.3,
+    rootMargin: "0px 0px -20px 0px"
+  };
+
+  const appearOnScroll = new IntersectionObserver(function (entries, observer) {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      entry.target.classList.add('active');
+      observer.unobserve(entry.target);
+    });
+  }, appearOptions);
+
+  faders.forEach(fader => {
+    appearOnScroll.observe(fader);
+  });
+</script>
+
+
+<script>
+  const cards = document.querySelectorAll('.onboard-card');
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('visible');
+        obs.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.3 });
+
+  cards.forEach(c => obs.observe(c));
+</script>
+
+
+
+
+</body>
+</html>

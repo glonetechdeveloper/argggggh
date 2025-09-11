@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Order History | BuyMeFood</title>
+  <link rel="stylesheet" href="./vendors.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+</head>
+<body>
+  <nav class="navbar">
+    <a href="dashboard.html" class="logo">
+      <img src="./assets/logos/Screenshot_2025-08-03_182027-removebg-preview.png" alt="Logo" />
+    </a>
+    <div class="hamburger" id="hamburgerBtn"><i class="fas fa-bars"></i></div>
+    <ul class="nav-links">
+      <li><a href="vendors.html">Vendors</a></li>
+      <li><a href="orders.html" class="active">Order History</a></li>
+      <li><a href="cart.html" class="cart-link">🛒 Cart (<span id="cart-count">0</span>)</a></li>
+      <li><a href="profile.html"><i class="fas fa-user-circle"></i></a></li>
+    </ul>
+<!-- <span id="userEmail" style="margin-left: 20px; color: #333;"></span> -->  </nav>
+  <div class="sidebar" id="mobileSidebar">
+    <div class="close-btn" id="closeSidebar"><i class="fas fa-times"></i></div>
+    <ul>
+      <li><a href="vendors.html">Vendors</a></li>
+      <li><a href="orders.html" class="active">Order History</a></li>
+      <li><a href="cart.html" class="cart-link">🛒 Cart (<span class="cart-count">0</span>)</a></li>
+      <li><a href="profile.html">Profile</a></li>
+    </ul>
+  </div>
+  <div class="overlay" id="overlay"></div>
+  <section class="orders-section">
+    <h2>Your Order History</h2>
+    <div id="orders-list"></div>
+  </section>
+  <script type="module" src="app.js"></script>
+  <script type="module" src="orders.js"></script>
+</body>
+</html>
